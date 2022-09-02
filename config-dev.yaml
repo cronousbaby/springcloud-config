@@ -6,3 +6,9 @@ eureka:
     service-url:
       defaultZone:
         http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka, http://eureka7003.com:7003/eureka
+datasource:
+   type: com.alibaba.druid.pool.DruidDataSource
+   driver-class-name: com.mysql.cj.jdbc.Driver
+   url: jdbc:mysql://127.0.0.1:3308/db2022?serverTimezone=UTC
+   username: root
+   password: bigdata 
