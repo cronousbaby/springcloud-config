@@ -26,6 +26,7 @@ spring:
           binder: kafka1
           destination: spring-test-topic
           content-type: application/json
+          group: myGroup1
 management:
   endpoints:
     web:
