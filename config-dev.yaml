@@ -12,3 +12,11 @@ datasource:
    url: jdbc:mysql://127.0.0.1:3308/db2022?serverTimezone=UTC
    username: root
    password: root 
+   
+#暴露监控端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+ 
