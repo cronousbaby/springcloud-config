@@ -26,3 +26,8 @@ spring:
           binder: kafka1
           destination: spring-test-topic
           content-type: application/json
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
