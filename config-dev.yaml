@@ -11,4 +11,4 @@ datasource:
    driver-class-name: com.mysql.cj.jdbc.Driver
    url: jdbc:mysql://127.0.0.1:3308/db2022?serverTimezone=UTC
    username: root
-   password: bigdata 
+   password: root 
