@@ -1,6 +1,6 @@
 eureka:
   instance:
-    instance-id: config-client-3355
+    instance-id: config-client-${server.port}
     prefer-ip-address: true
   client:
     service-url:
@@ -11,7 +11,16 @@ datasource:
    driver-class-name: com.mysql.cj.jdbc.Driver
    url: jdbc:mysql://127.0.0.1:3308/db2022?serverTimezone=UTC
    username: root
-   password: bigdata 
+   password: bigdata
+
+spring:
+  application:
+    name: config-client-service
+  rabbitmq:
+    addresses: 127.0.0.1
+    username: guest
+    password: guest
+    port: 5672
    
 #暴露监控端点
 management:
