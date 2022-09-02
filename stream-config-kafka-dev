@@ -1,0 +1,28 @@
+eureka:
+  instance:
+    instance-id: stream-provider-${server.port}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone:
+        http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+spring:
+  application:
+    name: cloud-stream-kafka-provider-service
+  cloud:
+    stream:
+      binders:
+        kafka1:
+          type: kafka
+          environment:
+            spring:
+              cloud:
+                stream:
+                  kafka:
+                    binder:
+                      brokers: hadoop181:9092,hadoop182:9092,hadoop183:9092
+      bindings:
+        input:
+          binder: kafka1
+          destination: spring-test-topic
+          content-type: application/json
